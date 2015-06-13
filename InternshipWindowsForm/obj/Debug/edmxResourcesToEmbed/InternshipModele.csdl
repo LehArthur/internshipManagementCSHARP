@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="internship_managementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_person" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="person" Relationship="Self.fk_admin_person" FromRole="admin" ToRole="person" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="category_of_company" Relationship="Self.fk_category_cc" FromRole="category" ToRole="category_of_company" />
+    <NavigationProperty Name="school" Relationship="Self.fk_school_category" FromRole="category" ToRole="school" />
+  </EntityType>
+  <EntityType Name="category_of_company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_category" Type="Int64" Nullable="false" />
+    <Property Name="id_company" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="category" Relationship="Self.fk_category_cc" FromRole="category_of_company" ToRole="category" />
+    <NavigationProperty Name="company" Relationship="Self.fk_company_cc" FromRole="category_of_company" ToRole="company" />
+  </EntityType>
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="town" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zipCode" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="validate" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="category_of_company" Relationship="Self.fk_company_cc" FromRole="company" ToRole="category_of_company" />
+    <NavigationProperty Name="user_of_company" Relationship="Self.fk_company_uc" FromRole="company" ToRole="user_of_company" />
+    <Property Name="nbEmployee" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="event">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_school" Type="Int64" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="town" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zipCode" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="school" Relationship="Self.fk_event_school" FromRole="event" ToRole="school" />
+    <NavigationProperty Name="user_of_event" Relationship="Self.fk_event_ue" FromRole="event" ToRole="user_of_event" />
+  </EntityType>
+  <EntityType Name="journal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_person" Type="Int64" Nullable="false" />
+    <Property Name="action" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="person" Relationship="Self.fk_journal_person" FromRole="journal" ToRole="person" />
+  </EntityType>
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_school" Type="Int64" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telephone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="admin" Relationship="Self.fk_admin_person" FromRole="person" ToRole="admin" />
+    <NavigationProperty Name="journal" Relationship="Self.fk_journal_person" FromRole="person" ToRole="journal" />
+    <NavigationProperty Name="school" Relationship="Self.fk_person_school" FromRole="person" ToRole="school" />
+    <NavigationProperty Name="user" Relationship="Self.fk_user_person" FromRole="person" ToRole="user" />
+  </EntityType>
+  <EntityType Name="school">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_category" Type="Int64" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zipCode" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="town" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telephone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="category" Relationship="Self.fk_school_category" FromRole="school" ToRole="category" />
+    <NavigationProperty Name="event" Relationship="Self.fk_event_school" FromRole="school" ToRole="event" />
+    <NavigationProperty Name="person" Relationship="Self.fk_person_school" FromRole="school" ToRole="person" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_person" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="person" Relationship="Self.fk_user_person" FromRole="user" ToRole="person" />
+    <NavigationProperty Name="user_of_company" Relationship="Self.fk_user_uc" FromRole="user" ToRole="user_of_company" />
+    <NavigationProperty Name="user_of_event" Relationship="Self.fk_user_ue" FromRole="user" ToRole="user_of_event" />
+  </EntityType>
+  <EntityType Name="user_of_company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user" Type="Int64" Nullable="false" />
+    <Property Name="id_company" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="company" Relationship="Self.fk_company_uc" FromRole="user_of_company" ToRole="company" />
+    <NavigationProperty Name="user" Relationship="Self.fk_user_uc" FromRole="user_of_company" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user_of_event">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_user" Type="Int64" Nullable="false" />
+    <Property Name="id_event" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="event" Relationship="Self.fk_event_ue" FromRole="user_of_event" ToRole="event" />
+    <NavigationProperty Name="user" Relationship="Self.fk_user_ue" FromRole="user_of_event" ToRole="user" />
+  </EntityType>
+  <Association Name="fk_admin_person">
+    <End Role="person" Type="Self.person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="admin" Type="Self.admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="admin">
+        <PropertyRef Name="id_person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_category_cc">
+    <End Role="category" Type="Self.category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="category_of_company" Type="Self.category_of_company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="category_of_company">
+        <PropertyRef Name="id_category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_school_category">
+    <End Role="category" Type="Self.category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="school" Type="Self.school" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="school">
+        <PropertyRef Name="id_category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_company_cc">
+    <End Role="company" Type="Self.company" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="category_of_company" Type="Self.category_of_company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="company">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="category_of_company">
+        <PropertyRef Name="id_company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_company_uc">
+    <End Role="company" Type="Self.company" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_of_company" Type="Self.user_of_company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="company">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="user_of_company">
+        <PropertyRef Name="id_company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_event_school">
+    <End Role="school" Type="Self.school" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="event" Type="Self.event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="event">
+        <PropertyRef Name="id_school" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_event_ue">
+    <End Role="event" Type="Self.event" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_of_event" Type="Self.user_of_event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="event">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="user_of_event">
+        <PropertyRef Name="id_event" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_journal_person">
+    <End Role="person" Type="Self.person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="journal" Type="Self.journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="journal">
+        <PropertyRef Name="id_person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_person_school">
+    <End Role="school" Type="Self.school" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="person" Type="Self.person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="person">
+        <PropertyRef Name="id_school" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_person">
+    <End Role="person" Type="Self.person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user" Type="Self.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="id_person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_uc">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_of_company" Type="Self.user_of_company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="user_of_company">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_ue">
+    <End Role="user" Type="Self.user" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_of_event" Type="Self.user_of_event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="user_of_event">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModeleEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admin" EntityType="Self.admin" />
+    <EntitySet Name="category" EntityType="Self.category" />
+    <EntitySet Name="category_of_company" EntityType="Self.category_of_company" />
+    <EntitySet Name="company" EntityType="Self.company" />
+    <EntitySet Name="event" EntityType="Self.event" />
+    <EntitySet Name="journal" EntityType="Self.journal" />
+    <EntitySet Name="person" EntityType="Self.person" />
+    <EntitySet Name="school" EntityType="Self.school" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <EntitySet Name="user_of_company" EntityType="Self.user_of_company" />
+    <EntitySet Name="user_of_event" EntityType="Self.user_of_event" />
+    <AssociationSet Name="fk_admin_person" Association="Self.fk_admin_person">
+      <End Role="person" EntitySet="person" />
+      <End Role="admin" EntitySet="admin" />
+    </AssociationSet>
+    <AssociationSet Name="fk_category_cc" Association="Self.fk_category_cc">
+      <End Role="category" EntitySet="category" />
+      <End Role="category_of_company" EntitySet="category_of_company" />
+    </AssociationSet>
+    <AssociationSet Name="fk_school_category" Association="Self.fk_school_category">
+      <End Role="category" EntitySet="category" />
+      <End Role="school" EntitySet="school" />
+    </AssociationSet>
+    <AssociationSet Name="fk_company_cc" Association="Self.fk_company_cc">
+      <End Role="company" EntitySet="company" />
+      <End Role="category_of_company" EntitySet="category_of_company" />
+    </AssociationSet>
+    <AssociationSet Name="fk_company_uc" Association="Self.fk_company_uc">
+      <End Role="company" EntitySet="company" />
+      <End Role="user_of_company" EntitySet="user_of_company" />
+    </AssociationSet>
+    <AssociationSet Name="fk_event_school" Association="Self.fk_event_school">
+      <End Role="school" EntitySet="school" />
+      <End Role="event" EntitySet="event" />
+    </AssociationSet>
+    <AssociationSet Name="fk_event_ue" Association="Self.fk_event_ue">
+      <End Role="event" EntitySet="event" />
+      <End Role="user_of_event" EntitySet="user_of_event" />
+    </AssociationSet>
+    <AssociationSet Name="fk_journal_person" Association="Self.fk_journal_person">
+      <End Role="person" EntitySet="person" />
+      <End Role="journal" EntitySet="journal" />
+    </AssociationSet>
+    <AssociationSet Name="fk_person_school" Association="Self.fk_person_school">
+      <End Role="school" EntitySet="school" />
+      <End Role="person" EntitySet="person" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_person" Association="Self.fk_user_person">
+      <End Role="person" EntitySet="person" />
+      <End Role="user" EntitySet="user" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_uc" Association="Self.fk_user_uc">
+      <End Role="user" EntitySet="user" />
+      <End Role="user_of_company" EntitySet="user_of_company" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_ue" Association="Self.fk_user_ue">
+      <End Role="user" EntitySet="user" />
+      <End Role="user_of_event" EntitySet="user_of_event" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,52 @@
+c:\users\arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\InternshipWindowsForm.exe.config
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\InternshipWindowsForm.exe
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\InternshipWindowsForm.pdb
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Properties.Resources.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.csproj.GenerateResource.Cache
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.exe
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.pdb
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\EntityFramework.dll
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\EntityFramework.xml
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Home.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Connection.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Students.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Student_Detail.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Company.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Company_Detail.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_school.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_school_detail.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_events.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_home_presentation.resources
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_event_detail.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_chart_event.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_empty.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_journal.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Journal_Actions.resources
+C:\Users\Arthur\documents\visual studio 2013\Projects\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\InternshipWindowsForm.exe.config
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.exe
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.pdb
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Home.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_chart_event.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Connection.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Company.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Company_Detail.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_empty.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_events.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_event_detail.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_home_presentation.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_journal.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Journal_Actions.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_school.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_school_detail.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Students.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Fm_Student_Detail.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.Properties.Resources.resources
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\obj\Debug\InternshipWindowsForm.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\InternshipWindowsForm.exe
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\InternshipWindowsForm.pdb
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\InternshipWindowsForm\InternshipWindowsForm\bin\Debug\fr\EntityFramework.resources.dll

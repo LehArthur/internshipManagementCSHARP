@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="abf86d787b094d04bb215881d0ec5ca9" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="internship_managementModel.admin" Width="1.5" PointX="8.125" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.category" Width="1.5" PointX="1.375" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.category_of_company" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.company" Width="1.5" PointX="1" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.event" Width="1.5" PointX="5.375" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.journal" Width="1.5" PointX="9.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.person" Width="1.5" PointX="7.125" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.school" Width="1.5" PointX="4" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.user" Width="1.5" PointX="11.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.user_of_company" Width="1.5" PointX="11.875" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="internship_managementModel.user_of_event" Width="1.5" PointX="10.375" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="internship_managementModel.fk_admin_person" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_category_cc" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_school_category" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_company_cc" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_company_uc" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_event_school" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_event_ue" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_journal_person" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_person_school" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_user_person" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_user_uc" ManuallyRouted="false" />
+        <AssociationConnector Association="internship_managementModel.fk_user_ue" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

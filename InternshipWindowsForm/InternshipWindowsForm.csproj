@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50B03051-2B63-4CB5-8D5D-7416803A93B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InternshipWindowsForm</RootNamespace>
+    <AssemblyName>InternshipWindowsForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="category.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="category_of_company.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="company.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="event.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_chart_event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_chart_event.Designer.cs">
+      <DependentUpon>Fm_chart_event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_Connection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_Connection.Designer.cs">
+      <DependentUpon>Fm_Connection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_Company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_Company.Designer.cs">
+      <DependentUpon>Fm_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_Company_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_Company_Detail.Designer.cs">
+      <DependentUpon>Fm_Company_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_empty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_empty.Designer.cs">
+      <DependentUpon>Fm_empty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_events.Designer.cs">
+      <DependentUpon>Fm_events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_event_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_event_detail.Designer.cs">
+      <DependentUpon>Fm_event_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_home_presentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_home_presentation.Designer.cs">
+      <DependentUpon>Fm_home_presentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_journal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_journal.Designer.cs">
+      <DependentUpon>Fm_journal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_Journal_Actions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_Journal_Actions.Designer.cs">
+      <DependentUpon>Fm_Journal_Actions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_school.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_school.Designer.cs">
+      <DependentUpon>Fm_school.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_school_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_school_detail.Designer.cs">
+      <DependentUpon>Fm_school_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_Students.Designer.cs">
+      <DependentUpon>Fm_Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fm_Student_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fm_Student_Detail.Designer.cs">
+      <DependentUpon>Fm_Student_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternshipModele.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternshipModele.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternshipModele.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternshipModele.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternshipModele.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="internship_managementDataSet.cs">
+      <DependentUpon>internship_managementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="internship_managementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>internship_managementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="internship_managementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>internship_managementDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="journal.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="person.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="school.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SuperClasse.cs" />
+    <Compile Include="user.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_of_company.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_of_event.cs">
+      <DependentUpon>InternshipModele.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_chart_event.resx">
+      <DependentUpon>Fm_chart_event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_Connection.resx">
+      <DependentUpon>Fm_Connection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_Company.resx">
+      <DependentUpon>Fm_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_Company_Detail.resx">
+      <DependentUpon>Fm_Company_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_empty.resx">
+      <DependentUpon>Fm_empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_events.resx">
+      <DependentUpon>Fm_events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_event_detail.resx">
+      <DependentUpon>Fm_event_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_home_presentation.resx">
+      <DependentUpon>Fm_home_presentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_journal.resx">
+      <DependentUpon>Fm_journal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_Journal_Actions.resx">
+      <DependentUpon>Fm_Journal_Actions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_school.resx">
+      <DependentUpon>Fm_school.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_school_detail.resx">
+      <DependentUpon>Fm_school_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_Students.resx">
+      <DependentUpon>Fm_Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fm_Student_Detail.resx">
+      <DependentUpon>Fm_Student_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="InternshipModele.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>InternshipModele.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="InternshipModele.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InternshipModele.edmx</DependentUpon>
+      <LastGenOutput>InternshipModele.Context.cs</LastGenOutput>
+    </None>
+    <None Include="InternshipModele.edmx.diagram">
+      <DependentUpon>InternshipModele.edmx</DependentUpon>
+    </None>
+    <None Include="InternshipModele.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>InternshipModele.edmx</DependentUpon>
+      <LastGenOutput>InternshipModele.cs</LastGenOutput>
+    </None>
+    <None Include="internship_managementDataSet.xsc">
+      <DependentUpon>internship_managementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="internship_managementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>internship_managementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="internship_managementDataSet.xss">
+      <DependentUpon>internship_managementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="internship_managementDataSet1.xsc">
+      <DependentUpon>internship_managementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="internship_managementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>internship_managementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="internship_managementDataSet1.xss">
+      <DependentUpon>internship_managementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\company.datasource" />
+    <None Include="Properties\DataSources\journal.datasource" />
+    <None Include="Properties\DataSources\person.datasource" />
+    <None Include="Properties\DataSources\school.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_close1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_close2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_reduce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_reduce1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\butt_fullscreen8.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
